@@ -1170,162 +1170,145 @@ a.btn1 .download-text {
             <img src="./images/kefu.webp" alt="在线客服！" style="width: 150px;">
         </a>
 </body>
-    <style>
-        .mask{
-            display: none;
-            position: fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            background:rgba(0,0,0,0.5);
-            z-index:9999;
-            /* flex完美居中 */
-            align-items: center;
-            justify-content: center;
-        }
-        .popup-box{
-            width: 420px;
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 30px 25px;
-            box-sizing: border-box;
-        }
-        .popup-title{
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .popup-text{
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            line-height: 1.8;
-            color: #222;
-            margin-bottom: 25px;
-        }
-        .close-btn{
-            display: block;
-            margin: 0 auto;
-            padding: 8px 26px;
-            background: #2563eb;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        .close-btn:hover{
-            background: #1d4ed8;
-        }
-    </style>
+<style>
+/* 一号弹窗 */
+.mask{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:9999;
+    align-items: center;
+    justify-content: center;
+}
+.popup-box{
+    width: 420px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+.popup-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.popup-text{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+    color: #222;
+    margin-bottom: 25px;
+}
+.close-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 26px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.close-btn:hover{
+    background: #1d4ed8;
+}
+
+/* 二号弹窗 mask1 */
+.mask1{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:999;
+    align-items: center;
+    justify-content: center;
+}
+.popup-box1{
+    width: 420px;
+    background: #000;
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+.popup-img1{
+    width: 50%;
+    margin: 0 auto 20px;
+    border-radius: 6px;
+    display: block;
+}
+.popup-title1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg,#c89729,#fff7bc,#c89729);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: flowGold 2s linear infinite;
+}
+.popup-text1{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg,#c89729,#fff7bc,#c89729);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: flowGold 2s linear infinite;
+}
+.close-btn1{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 26px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.close-btn1:hover{
+    background: #1d4ed8;
+}
+@keyframes flowGold {
+    0%{background-position: 0% center;}
+    100%{background-position: 200% center;}
+}
+</style>
 </head>
 <body>
 
+<!-- 一号弹窗 -->
 <div class="mask" id="mask">
     <div class="popup-box">
         <div class="popup-title">福耀娱乐，您值得信任的永久伙伴！</div>
         <div class="popup-text">
-            特邀客户您好，福利金下载app找客服领取即可！<br>
+特邀客户您好，福利金下载app找客服领取即可！<br>
 特邀28用户进万利房间（363336）<br>可领取208福利金！<br>（可提现微信支付宝）<br>
 （六合彩用户可以领取108福利金）！<br>
-希望首次捧场能给您带来好运！<br>
-            
+希望首次捧场能给您带来好运！
         </div>
         <button class="close-btn" onclick="hidePopup()">关闭</button>
     </div>
 </div>
 
-<script>
-const mask = document.getElementById('mask');
-// 页面加载自动弹出
-window.onload = function(){
-    mask.style.display = 'flex';
-}
-function hidePopup(){
-    mask.style.display = 'none';
-}
-</script>
-   <style>
-        .mask1{
-            display: none;
-            position: fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            background:rgba(0,0,0,0.5);
-            z-index:999;
-            align-items: center;
-            justify-content: center;
-        }
-        .popup-box1{
-            width: 420px;
-            background: #000;
-            border-radius: 10px;
-            padding: 30px 25px;
-            box-sizing: border-box;
-        }
-        .popup-img1{
-            width: 50%;
-            margin: 0 auto 20px;
-            border-radius: 6px;
-            display: block;
-        }
-        .popup-title1{
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-            /* 流金色渐变文字 */
-            background: linear-gradient(90deg,#c89729,#fff7bc,#c89729);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: flowGold 2s linear infinite;
-        }
-        .popup-text1{
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            /* 流金色渐变文字 */
-            background: linear-gradient(90deg,#c89729,#fff7bc,#c89729);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: flowGold 2s linear infinite;
-        }
-        .close-btn1{
-            display: block;
-            margin: 0 auto;
-            padding: 8px 26px;
-            background: #2563eb;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        .close-btn1:hover{
-            background: #1d4ed8;
-        }
-        /* 流光动画 */
-        @keyframes flowGold {
-            0%{background-position: 0% center;}
-            100%{background-position: 200% center;}
-        }
-    </style>
-</head>
-<body>
-
+<!-- 二号弹窗 -->
 <div class="mask1" id="mask1">
     <div class="popup-box1">
-        <img class="popup-img1" src="./images/1.jpg">
+        <img class="popup-img1" src="https://wtsymycyh.99kq.top/pq8cos/image/2401667_1c6784c6-a04a-46e5-8222-1674bd266d81_1781203463842.png">
         <div class="popup-title1">公告</div>
         <div class="popup-text1">
 我们的资料是新奥特4肖<br>每天晚上8点更新<br>10期中5-8期<br>（首期不中全额包赔）<br>下载万利363336房间<br>找客服领取最新母盘资料！
@@ -1335,9 +1318,17 @@ function hidePopup(){
 </div>
 
 <script>
+const mask = document.getElementById('mask');
 const mask1 = document.getElementById('mask1');
+
+// 页面加载 两个弹窗同时弹出
 window.onload = function(){
+    mask.style.display = 'flex';
     mask1.style.display = 'flex';
+}
+
+function hidePopup(){
+    mask.style.display = 'none';
 }
 function hidePopup1(){
     mask1.style.display = 'none';
