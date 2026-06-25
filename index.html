@@ -1171,55 +1171,6 @@ a.btn1 .download-text {
         </a>
 </body>
 <style>
-/* 一号弹窗 */
-.mask{
-    display: none;
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.5);
-    z-index:9999;
-    align-items: center;
-    justify-content: center;
-}
-.popup-box{
-    width: 420px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 30px 25px;
-    box-sizing: border-box;
-}
-.popup-title{
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.popup-text{
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.8;
-    color: #222;
-    margin-bottom: 25px;
-}
-.close-btn{
-    display: block;
-    margin: 0 auto;
-    padding: 8px 26px;
-    background: #2563eb;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.close-btn:hover{
-    background: #1d4ed8;
-}
-
-/* 二号弹窗 mask1 */
 .mask1{
     display: none;
     position: fixed;
@@ -1291,10 +1242,6 @@ a.btn1 .download-text {
 </head>
 <body>
 
-<!-- 一号弹窗 -->
-
-
-<!-- 二号弹窗 -->
 <div class="mask1" id="mask1">
     <div class="popup-box1">
         <img class="popup-img1" src="./images/1.jpg">
@@ -1307,23 +1254,14 @@ a.btn1 .download-text {
 </div>
 
 <script>
-const mask = document.getElementById('mask');
 const mask1 = document.getElementById('mask1');
-
-// 页面加载 两个弹窗同时弹出
 window.onload = function(){
-    mask.style.display = 'flex';
     mask1.style.display = 'flex';
-}
-
-function hidePopup(){
-    mask.style.display = 'none';
 }
 function hidePopup1(){
     mask1.style.display = 'none';
 }
 </script>
-
 </body>
 
 </html>
